@@ -1,0 +1,442 @@
+.navbar {
+    justify-content: center;
+    height: 120px !important;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.navbar-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-center ul {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Espacio de 15px entre cada menú */
+    
+}
+
+.nav-link{
+    color: aliceblue !important;
+
+}
+
+
+/* Capa oscura sobre el video */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.700); /* Oscurece el video con un overlay negro al 50% */
+    z-index: -1; /* La capa está detrás del contenido pero delante del video */
+}
+
+/* Navbar */
+.navbar {
+    justify-content: center;
+    height: 120px !important;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparencia del menú */
+    z-index: 1; /* Asegura que esté sobre el video */
+}
+
+.navbar-toggler {
+    z-index: 2; /* Asegura que el botón hamburguesa se mantenga visible */
+}
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.navbar-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-center ul {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Espacio de 15px entre cada menú */
+}
+
+.nav-link {
+    color: #000; /* Cambia esto si necesitas otro color para los enlaces */
+}
+
+.nav-link:hover {
+    color: #555; /* Color en hover */
+}
+
+
+
+/* Menú de escritorio solo visible en pantallas grandes */
+.desktop-navbar {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .desktop-navbar {
+        display: flex;
+    }
+}
+
+/* Menú móvil solo visible en pantallas pequeñas */
+.mobile-navbar {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-navbar {
+        display: flex;
+    }
+}
+
+
+/* Estilos específicos para el menú móvil */
+.mobile-navbar .navbar-brand {
+    margin-bottom: 10px;
+}
+
+.mobile-navbar .navbar-toggler {
+    margin-top: 0;
+    display: block;
+}
+
+.mobile-navbar .navbar-nav {
+    text-align: center;
+}
+
+.mobile-navbar .navbar-toggler-icon {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Coloca el video detrás del contenido */
+    
+}
+
+/* Texto sobre el video */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px; /* Ajusta según sea necesario */
+}
+/* Estilos para el video dentro del banner */
+.video-banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el banner sin distorsión */
+}
+
+.button-container {
+    display: inline-flex;
+    gap: 30px; /* Espacio entre los botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #0cb639;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra alrededor del botón */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transición para un efecto suave */
+}
+
+
+/* Efecto de sombra y elevación al hacer hover sobre el botón */
+.button-container button:hover {
+    box-shadow: 0px 6px 8px rgba(12, 190, 57, 0.4); /* Aumenta la sombra al hacer hover */
+    transform: translateY(-12px); /* Levanta ligeramente el botón al hacer hover */
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+
+/* Estilos para el preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Color de fondo del preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté encima de todo el contenido */
+}
+
+/* Efecto de parpadeo y zoom en la imagen del preloader */
+#preloader img {
+    width: 110px; /* Tamaño de la imagen */
+    height: auto;
+    animation: blinkZoom 2s infinite;
+}
+
+/* Animación de parpadeo y zoom */
+@keyframes blinkZoom {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+
+/* Esconder el preloader después de la carga */
+body.loaded #preloader {
+    display: none;
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+
+/* Contenedor del video como banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Ajusta esta altura según sea necesario para el banner */
+    overflow: hidden;
+}
+
+/* Estilos para el contenido que viene después del banner */
+section + section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px; /* Espacio entre el banner y el contenido siguiente */
+}
+
+
+
+
+
+/* CSS */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-button img {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+
+.footer {
+    background-color: #0d71d5;
+    color: #f8f9fa;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #17a2b8;
+}
+
+.footer h5 {
+    color: #f8f9fa;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.footer hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer i {
+    font-size: 1.2rem;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li i {
+    margin-right: 10px;
+}
+
+.footer .row {
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+
+
+.services-section {
+    background: linear-gradient(to bottom, 
+    rgb(12, 12, 126) 0%, 
+                rgb(12, 12, 126) 30%, 
+                rgb(80, 229, 80) 40%, 
+                rgb(80, 229, 80) 70%, 
+                rgb(241, 241, 86) 80%, 
+                rgb(242, 242, 88) 100%);
+    position: relative;
+    padding: 60px 0;
+}
+
+.services-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Si deseas una capa de superposición */
+}
+
+.card-container {
+    position: relative;
+    z-index: 2;
+}
+
+.number-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.btn-custom {
+    background-color: #28a745; /* Verde por defecto */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #218838; /* Verde oscuro al pasar el mouse */
+}
+
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28%255, %255, %255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Asegurarse de que el menú no se cierre cuando se hace clic en un enlace */
+.navbar-collapse.show {
+    display: block !important;
+}
+
+.navbar-nav .nav-link {
+    cursor: pointer;
+}
